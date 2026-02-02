@@ -5,21 +5,21 @@
 class PortSelector < Formula
   desc "Port allocator for parallel local dev environments"
   homepage "https://github.com/dapi/port-selector"
-  version "0.9.2"
+  version "0.9.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.2/port-selector-darwin-amd64"
-      sha256 "045ea56e2e169ffeacf6e5595f037cd28a0e0fbf7fe30d6958d515be5f916c06"
+      url "https://github.com/dapi/port-selector/releases/download/v0.9.3/port-selector-darwin-amd64"
+      sha256 "9634fd319ddb8a4792e1ac0809046890471629ed16d2d7ae677399fe2c36d144"
 
       def install
         bin.install "port-selector"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.2/port-selector-darwin-arm64"
-      sha256 "4e42471730ddd596935073068e82fde5ea63def43f61f3fd859c3380b368aca8"
+      url "https://github.com/dapi/port-selector/releases/download/v0.9.3/port-selector-darwin-arm64"
+      sha256 "e56c3f5ce06dbe6ff917b7fc8dbb2728f7033444bd8c2237cd9502d684f1913e"
 
       def install
         bin.install "port-selector"
@@ -29,15 +29,15 @@ class PortSelector < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.2/port-selector-linux-amd64"
-      sha256 "45dff56b8df0db666bb61e90b838d29053087b6655c46bf8ce153fca42a91344"
+      url "https://github.com/dapi/port-selector/releases/download/v0.9.3/port-selector-linux-amd64"
+      sha256 "a1b0ae091883ae1570c7c14c9794bcb9298473f2f444194aa3e2618d862d6e72"
       def install
         bin.install "port-selector"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.2/port-selector-linux-arm64"
-      sha256 "781fd42914ced8d720dfd562e3559c1bb4b6179993a64457f67bfabe14a54118"
+      url "https://github.com/dapi/port-selector/releases/download/v0.9.3/port-selector-linux-arm64"
+      sha256 "c7968d51ec357155df67a305103b1596b1497ba380cc272a1bd9d9e1a904c20e"
       def install
         bin.install "port-selector"
       end
