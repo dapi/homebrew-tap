@@ -5,13 +5,13 @@
 class PortSelector < Formula
   desc "Port allocator for parallel local dev environments"
   homepage "https://github.com/dapi/port-selector"
-  version "0.9.5"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.5/port-selector-darwin-amd64"
-      sha256 "b07b534bbd23452c63194eb0a0eea1c6bc31923e8be87f17537a3687af8089da"
+      url "https://github.com/dapi/port-selector/releases/download/v0.10.0/port-selector-darwin-amd64"
+      sha256 "6f3b0df452d67c95a77b63833616bb99871cb1531eb7b2cc8fe812ffebebd1be"
 
       def install
         binary_name = if OS.mac?
@@ -23,8 +23,8 @@ class PortSelector < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.5/port-selector-darwin-arm64"
-      sha256 "8b5122054f90aab8ff8e11959728a22cd38c9221e1843080c359cc08d53823c7"
+      url "https://github.com/dapi/port-selector/releases/download/v0.10.0/port-selector-darwin-arm64"
+      sha256 "719d230e8232478d0b813384003d0c508540bb54c7d1f3dd91ef886016bc463c"
 
       def install
         binary_name = if OS.mac?
@@ -39,8 +39,8 @@ class PortSelector < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.5/port-selector-linux-amd64"
-      sha256 "0165987053a6b94ed41c9298b436cdda34470dd8e2873e60b2d572b35bc9ab7c"
+      url "https://github.com/dapi/port-selector/releases/download/v0.10.0/port-selector-linux-amd64"
+      sha256 "cd3096db4e81f2598784dc0312b40e9af77d85c1b2ce31dc5a07a205a7fab305"
       def install
         binary_name = if OS.mac?
           Hardware::CPU.arm? ? "port-selector-darwin-arm64" : "port-selector-darwin-amd64"
@@ -51,8 +51,8 @@ class PortSelector < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dapi/port-selector/releases/download/v0.9.5/port-selector-linux-arm64"
-      sha256 "fd5056699630e6126d96df51f8f20590c44ecdbce22e24e2c6c16f639310bc34"
+      url "https://github.com/dapi/port-selector/releases/download/v0.10.0/port-selector-linux-arm64"
+      sha256 "adef91afc154ecece94a055e0bdf6cd420321a08e9c096ef143210786e0c5cf0"
       def install
         binary_name = if OS.mac?
           Hardware::CPU.arm? ? "port-selector-darwin-arm64" : "port-selector-darwin-amd64"
